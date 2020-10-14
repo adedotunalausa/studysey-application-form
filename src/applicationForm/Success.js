@@ -9,29 +9,34 @@ import { makeStyles } from '@material-ui/core/styles'
 // CSS Style
 const useStyles = makeStyles(() => ({
   container: {
-    // padding: "1rem",
     paddingBottom: "3rem",
     textAlign: "center",
     background: "#FAFAFA",
   },
   responseBox: {
+    maxWidth: "606px",
     padding: "1rem",
     background: "#FFFFFF",
     borderRadius: "16px",
+    margin: "0 auto"
+  },
+  agentBoxContainer: {
+    maxWidth: "606px",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    margin: "0 auto",
   },
   agentBoxWrapper: {
     maxWidth: "370px",
     padding: "1rem",
+    paddingRight: "2rem",
     background: "#FFFFFF",
     borderRadius: "8px",
     display: "flex",
     alignItems: "flex-start",
     marginBottom: "2rem",
   },
-  agentBoxContainer: {
-    display: "flex",
-    flexWrap: "wrap",
-  }
 }));
 
 const Success = () => {
@@ -63,6 +68,10 @@ const Success = () => {
             <Box style={{ textAlign: "left" }}>
               <Typography >
                 David Mobolaji
+                 <img
+                  style={{ marginLeft: "0.6rem" }}
+                  src="/images/check-circle.svg"
+                  alt="check-circle" />
               </Typography>
               <Typography style={{ fontSize: "0.8rem", color: "#182C51" }}>
                 10 Students Onboarded
@@ -100,13 +109,16 @@ const Success = () => {
             </Box>
           </Box>
           <Box className={classes.agentBoxWrapper}>
-            <img style={{ marginRight: "0.6rem" }} src="/images/ellipse.svg" alt="avatar" />
+            <img
+              style={{ marginRight: "0.6rem" }}
+              src="/images/ellipse.svg"
+              alt="avatar" />
             <Box style={{ textAlign: "left" }}>
               <Typography >
-                David Mobolaji
+                Babatunde Sheriff
               </Typography>
               <Typography style={{ fontSize: "0.8rem", color: "#182C51" }}>
-                10 Students Onboarded
+                2 Students Onboarded
               </Typography>
               <Typography
                 style={{

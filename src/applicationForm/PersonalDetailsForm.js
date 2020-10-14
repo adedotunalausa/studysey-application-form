@@ -31,11 +31,14 @@ const useStyles = makeStyles(() => ({
   textField: {
     border: "1px solid #00487C",
     borderRadius: "5px",
-    width: "250px",
+    width: "100%",
     height: "42px",
     padding: "1rem",
     fontSize: "0.9rem",
     marginBottom: "2rem",
+    [theme.breakpoints.up('sm')]: {
+      width: "235px",
+    },
   },
   label: {
     marginBottom: "0.5rem",
@@ -68,8 +71,8 @@ const CustomRadio = withStyles({
 
 const PersonalDetailsForm = () => {
   const classes = useStyles();
-  const [value, setValue] = useState('male');
-  const [booleanValue, setBooleanValue] = useState("yes");
+  const [value, setValue] = useState("");
+  const [booleanValue, setBooleanValue] = useState("");
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -151,26 +154,26 @@ const PersonalDetailsForm = () => {
           <Typography
             className={classes.label}
             component="legend">Phone Number</Typography>
-          <InputBase className={classes.textField} variant="outlined" />
+          <InputBase style={{ width: "100%" }} className={classes.textField} variant="outlined" />
         </Box>
         <Box>
           <Typography
             className={classes.label}
             component="legend">Email Address</Typography>
-          <InputBase className={classes.textField} variant="outlined" />
+          <InputBase style={{ width: "100%" }} className={classes.textField} variant="outlined" />
         </Box>
         <Divider className={classes.margin} />
         <Box>
           <Typography
             className={classes.label}
             component="legend">Nationality</Typography>
-          <InputBase className={classes.textField} variant="outlined" />
+          <InputBase style={{ width: "100%" }} className={classes.textField} variant="outlined" />
         </Box>
         <Box>
           <Typography
             className={classes.label}
             component="legend">Official Home Address</Typography>
-          <InputBase className={classes.textField} variant="outlined" />
+          <InputBase style={{ width: "100%" }} className={classes.textField} variant="outlined" />
         </Box>
         <Grid className={classes.inputGrid}>
           <Box>
